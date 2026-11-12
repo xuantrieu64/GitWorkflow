@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Đăng nhập vào StoryToScene để tiếp tục dự án, truyện và kịch bản của bạn."
+    />
+    <title>Đăng nhập — StoryToScene</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Bỏ qua điều hướng</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="brand-and-nav">
+          <a class="brand" href="#" aria-label="StoryToScene — Trang chủ">
+            <span class="brand-mark">
+              <img src="./assets/clapperboard.svg" alt="" />
+            </span>
+            <span class="brand-name">StoryToScene</span>
+          </a>
+          <nav class="main-nav" aria-label="Điều hướng chính">
+            <a class="nav-link" href="#">Trang chủ</a>
+            <a class="nav-link nav-link-current" href="#register">Tạo tài khoản</a>
+          </nav>
+        </div>
+        <div class="header-actions">
+          <div class="language-switch" aria-label="Ngôn ngữ">
+            <button type="button" class="language-option" aria-label="English">EN</button>
+            <span aria-hidden="true">/</span>
+            <button
+              type="button"
+              class="language-option is-selected"
+              aria-current="true"
+              aria-label="Tiếng Việt"
+            >
+              VI
+            </button>
+          </div>
+          <button type="button" class="display-button" aria-label="Đổi giao diện hiển thị">
+            <img src="./assets/display.svg" alt="" />
+          </button>
+          <a class="header-cta" href="#register">Bắt đầu miễn phí</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="main-content">
+      <div class="page-grid">
+        <section class="hero-copy" aria-labelledby="hero-title">
+          <a class="back-link" href="#workspace">
+            <img src="./assets/back-arrow.svg" alt="" />
+            <span>Trở lại bàn làm việc</span>
+          </a>
+          <h1 id="hero-title">Đăng nhập vào<br />StoryToScene</h1>
+          <p class="hero-description">
+            Mở lại dự án, truyện và kịch bản đang làm dở, rồi nhờ AI làm tiếp từ chỗ bạn dừng.
+          </p>
+        </section>
+
+        <section class="login-column" aria-label="Đăng nhập">
+          <div class="login-card">
+            <div class="card-heading">
+              <p class="eyebrow">Tài khoản của bạn</p>
+              <h2>Đăng nhập</h2>
+            </div>
+
+            <button type="button" class="google-button">
+              <img src="./assets/google.svg" alt="" />
+              <span>Continue with Google</span>
+            </button>
+
+            <div class="divider" aria-hidden="true"><span>OR</span></div>
+
+            <div class="method-tabs" role="tablist" aria-label="Phương thức đăng nhập">
+              <button
+                id="password-tab"
+                class="method-tab is-active"
+                type="button"
+                role="tab"
+                aria-selected="true"
+                aria-controls="login-form"
+              >
+                Mật khẩu
+              </button>
+              <button
+                id="email-tab"
+                class="method-tab"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                aria-controls="login-form"
+                tabindex="-1"
+              >
+                Mã email
+              </button>
+            </div>
+
+            <form id="login-form" class="login-form">
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="ten@example.com"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+              <div id="secret-field" class="form-field">
+                <label id="secret-label" for="secret">Mật khẩu</label>
+                <input
+                  id="secret"
+                  name="password"
+                  type="password"
+                  autocomplete="current-password"
+                  required
+                />
+              </div>
+              <button class="submit-button" type="submit">Đăng nhập</button>
+            </form>
+
+            <div class="secondary-links">
+              <p>
+                <a href="#forgot-password">Quên mật khẩu?</a>
+                <button id="switch-method-link" type="button">Đăng nhập bằng mã email</button>
+              </p>
+              <p><span>Mới đến Studio?</span> <a id="register" href="#register">Tạo tài khoản</a></p>
+            </div>
+            <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
